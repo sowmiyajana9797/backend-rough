@@ -65,8 +65,8 @@
 //     console.log(data.toString())
 //  })
 
-const fs = require('fs');
-const path = require('path');
+// const fs = require('fs');
+// const path = require('path');
 
 // fs.readFile(path.join(__dirname, "files", "start.txt"), "utf-8", (err, data) => {
 //     if (err) throw err;
@@ -100,19 +100,38 @@ const path = require('path');
 // });
 
 //file rename using path and fs modules
-const oldPath = path.join(__dirname,'./files', 'start.txt');
-const newPath = path.join(__dirname,'./files', 'newName.txt');
+// const oldPath = path.join(__dirname,'./files', 'start.txt');
+// const newPath = path.join(__dirname,'./files', 'newName.txt');
 
-fs.rename(oldPath, newPath, (err) => {
-    if (err) throw err;
-    console.log('File renamed successfully.');
-});
+// fs.rename(oldPath, newPath, (err) => {
+//     if (err) throw err;
+//     console.log('File renamed successfully.');
+// });
 
 
 // folder delete in node.js
-const dirPath = path.join(__dirname, './files');
+// const dirPath = path.join(__dirname, './files');
 
-fs.rm(dirPath, { recursive: true, force: true }, (err) => {
-    if (err) throw err;  
-    console.log('Directory removed successfully.');
-});
+// fs.rm(dirPath, { recursive: true, force: true }, (err) => {
+//     if (err) throw err;  
+//     console.log('Directory removed successfully.');
+// });
+
+
+// DATE : 28/01/2025
+
+// http in Node.js Modules:
+// The http module in Node.js is a core module used to create HTTP servers and make HTTP requests. It offers various properties and methods to interact with HTTP.
+
+const http = require('http');
+
+ const server = http.createServer((req,res)=>{
+    res.writeHead(200, {"content-type":"text/plain"})
+    res.end("Hai Hello Makkaleyyy!!!!! This is sowmiya, Welcome to our site!!!")
+ })
+
+ server.listen(3000,()=>{
+    console.log("welcome to 3000 port successfully running on live")
+ })
+
+//  Todays topic is http module
